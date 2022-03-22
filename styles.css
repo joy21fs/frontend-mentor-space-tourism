@@ -723,10 +723,8 @@ h2 {
     background-image: url("images/technology/background-technology-tablet.jpg");
   }
 
-  @media (max-width: 55em) {
-    .grid-container--technology h1 {
-      margin-left: 2.4375rem;
-    }
+  .grid-container--technology h1 {
+    margin-left: 2.4375rem;
   }
 
   .technology-image img {
@@ -934,6 +932,10 @@ h2 {
     grid-template-rows: auto min-content 5rem;
     align-items: start;
     padding-inline: 2.4375rem 0;
+  }
+
+  .grid-container--technology h1 {
+    margin-left: 0;
   }
 
   .grid-container--technology .tablist {

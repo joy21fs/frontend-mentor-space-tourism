@@ -723,6 +723,10 @@ h2 {
     padding-inline: 0;
     background-image: url("images/technology/background-technology-tablet.jpg");
   }
+  
+  .grid-container--technology h1 {
+    margin-left: 2.4375rem;
+  }
 
   .technology-image img {
     height: auto;

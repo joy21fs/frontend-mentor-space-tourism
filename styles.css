@@ -691,7 +691,6 @@ h2 {
       ". tabs ."
       ". image .";
     padding-bottom: 0;
-    grid-template-rows: auto 18.5rem auto 1fr;
   }
 
   .grid-container--crew::before {
@@ -723,9 +722,11 @@ h2 {
     padding-inline: 0;
     background-image: url("images/technology/background-technology-tablet.jpg");
   }
-  
-  .grid-container--technology h1 {
-    margin-left: 2.4375rem;
+
+  @media (max-width: 55em) {
+    .grid-container--technology h1 {
+      margin-left: 2.4375rem;
+    }
   }
 
   .technology-image img {

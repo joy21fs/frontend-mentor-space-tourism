@@ -24,7 +24,22 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
-### Screenshot
+### Screenshots
+
+![joy21fs github io_space-tourism_ (1)](https://user-images.githubusercontent.com/95619834/159518769-17a55f7b-2fb7-4c3f-9cd4-dbc787ee654a.png)![joy21fs github io_space-tourism_ (2)](https://user-images.githubusercontent.com/95619834/159518806-4eb43d0b-9b0b-4a2f-8720-cda6d6549dd8.png)
+![joy21fs github io_space-tourism_ (3)](https://user-images.githubusercontent.com/95619834/159518817-e7d0bb50-c9c2-429d-99b4-cfc46cee5f6d.png)
+![joy21fs github io_space-tourism_ (4)](https://user-images.githubusercontent.com/95619834/159518820-3cf8d351-0423-4140-91f1-e13a08256ed6.png)
+![joy21fs github io_space-tourism_ (5)](https://user-images.githubusercontent.com/95619834/159518824-844e0274-3c64-48fa-ad90-4c36922aadd9.png)
+![joy21fs github io_space-tourism_ (6)](https://user-images.githubusercontent.com/95619834/159518828-cf8d7198-ae46-43dd-a7a8-fa4d0b366774.png)
+![joy21fs github io_space-tourism_ (7)](https://user-images.githubusercontent.com/95619834/159518833-c679bf95-0dd9-4a0e-b8e2-3ac5611a7e32.png)
+![joy21fs github io_space-tourism___crew(iPhone SE) (1)](https://user-images.githubusercontent.com/95619834/159518843-87a9163a-6de1-44da-bfca-f8dd36e67999.png)
+![joy21fs github io_space-tourism___crew(iPhone SE)](https://user-images.githubusercontent.com/95619834/159518850-942a6a51-2d95-427b-a53e-75dc85542ad1.png)
+![joy21fs github io_space-tourism_](https://user-images.githubusercontent.com/95619834/159518857-dc1415aa-6f98-43cf-92cc-dc38bcc3819a.png)
+![joy21fs github io_space-tourism_(iPhone SE) (1)](https://user-images.githubusercontent.com/95619834/159518866-cc0bfad7-c258-4ce0-bb32-ab9cddd22290.png)
+![joy21fs github io_space-tourism_(iPhone SE)](https://user-images.githubusercontent.com/95619834/159518871-c1e82cb9-b43f-4b70-98e3-b0aacbb77236.png)
+
+
+
 
 ### Links
 

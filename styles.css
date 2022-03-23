@@ -66,6 +66,7 @@ body,
   /* background-color: hsl(var(--clr-dark)); */
   color: hsl(var(--clr-light));
   overflow-x: hidden;
+  -webkit-text-size-adjust: none;
 }
 
 li {
@@ -1094,6 +1095,7 @@ article > p {
 
   .dot-tab {
     width: 0.94rem;
+    height: 0.94rem;
   }
 
   /* Technology */

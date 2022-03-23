@@ -166,6 +166,9 @@ select {
   gap: 2rem;
 }
 
+.grid-container > * {
+  max-width: 100%;
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
@@ -449,7 +452,7 @@ h2 {
 }
 
 .tablist {
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .text-tab {

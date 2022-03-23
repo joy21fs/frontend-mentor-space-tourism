@@ -66,7 +66,7 @@ body,
   /* background-color: hsl(var(--clr-dark)); */
   color: hsl(var(--clr-light));
   overflow-x: hidden;
-  -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
 }
 
 li {

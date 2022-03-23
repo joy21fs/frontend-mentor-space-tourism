@@ -203,11 +203,15 @@ select {
 }
 
 article,
+.tab-list {
+  width: 100%;
+}
+
+article,
 .destination-image,
 .crew-image,
 .technology-image {
   display: none;
-  max-width: 100%;
 }
 
 article.active,
@@ -500,7 +504,6 @@ article > p {
 
 .tablist {
   justify-content: center;
-  width: 100%;
 }
 
 .text-tab {

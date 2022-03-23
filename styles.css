@@ -1048,6 +1048,13 @@ article > p {
     width: clamp(20rem, 45vh, 27.81rem);
   }
 
+  @supports not (aspect-ratio: 1) {
+    .destination-image,
+    .destination-image img {
+      height: clamp(20rem, 45vh, 27.81rem);
+    }
+  }
+
   /* Crew */
   .grid-container--crew {
     grid-template-areas:

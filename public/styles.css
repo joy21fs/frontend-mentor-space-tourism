@@ -203,6 +203,11 @@ select {
 }
 
 article,
+.tablist {
+  width: 100%;
+}
+
+article,
 .destination-image,
 .crew-image,
 .technology-image {
@@ -499,11 +504,16 @@ article > p {
 
 .tablist {
   justify-content: center;
-  width: 100%;
 }
 
 .text-tab {
   margin-inline: 0.25rem;
+}
+
+@media (max-width: 24em) {
+  .text-tab {
+    --gap: 0.5rem;
+  }
 }
 
 @supports not (margin-inline: 0.25rem) {
@@ -552,6 +562,7 @@ article > p {
   border-radius: 50%;
   width: 0.625rem;
   aspect-ratio: 1;
+  padding: 0;
 }
 
 @supports not (aspect-ratio: 1) {
@@ -715,6 +726,7 @@ article > p {
     padding: 2.4rem;
     --gap: 3rem;
     background-color: hsl(var(--clr-white) / 0.04);
+    -webkit-backdrop-filter: blur(1.5rem);
     backdrop-filter: blur(1.5rem)
       drop-shadow(-2rem 0 0.5rem hsl(var(--clr-dark)));
   }
@@ -778,6 +790,13 @@ article > p {
   .destination-image,
   .destination-image img {
     width: 18.75rem;
+  }
+
+  @supports not (aspect-ratio: 1) {
+    .destination-image,
+    .destination-image img {
+      height: 18.75rem;
+    }
   }
 
   .destination-description {
@@ -1031,6 +1050,13 @@ article > p {
     width: clamp(20rem, 45vh, 27.81rem);
   }
 
+  @supports not (aspect-ratio: 1) {
+    .destination-image,
+    .destination-image img {
+      height: clamp(20rem, 45vh, 27.81rem);
+    }
+  }
+
   /* Crew */
   .grid-container--crew {
     grid-template-areas:
@@ -1059,6 +1085,7 @@ article > p {
 
   .grid-container--crew .tablist {
     align-self: start;
+    justify-content: flex-start;
     --gap: 1.5rem;
   }
 
@@ -1084,6 +1111,7 @@ article > p {
 
   .dot-tab {
     width: 0.94rem;
+    height: 0.94rem;
   }
 
   /* Technology */

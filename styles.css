@@ -726,7 +726,8 @@ article > p {
     padding: 2.4rem;
     --gap: 3rem;
     background-color: hsl(var(--clr-white) / 0.04);
-    -webkit-backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem)
+      drop-shadow(-2rem 0 0.5rem hsl(var(--clr-dark)));
     backdrop-filter: blur(1.5rem)
       drop-shadow(-2rem 0 0.5rem hsl(var(--clr-dark)));
   }

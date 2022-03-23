@@ -138,6 +138,18 @@ select {
   gap: var(--gap, 1rem);
 }
 
+@supports (not (gap: var(--gap, 1rem))) and (flex-direction: column) {
+  .flex > *:where(:not(:first-child)) {
+    margin-top: var(--gap, 1rem);
+  }
+}
+
+@supports (not (gap: var(--gap, 1rem))) and (flex-direction: row) {
+  .flex > *:where(:not(:first-child)) {
+    margin-left: var(--gap, 1rem);
+  }
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
@@ -164,6 +176,13 @@ select {
   background-size: cover;
   background-repeat: no-repeat;
   gap: 2rem;
+}
+
+@supports (not (padding-inline: 1.5rem)) and
+  (not (padding-block: max(7rem, 10vh) 4.5rem)) {
+  .grid-container {
+    padding: max(7rem, 10vh) 1.5rem 4.5rem 1.5rem;
+  }
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -293,9 +312,8 @@ h2 {
   line-height: 1;
 }
 
-.crew-bio,
-.technology-description {
-  min-height: 9.375rem;
+article > p {
+  height: 20ex;
 }
 
 /* --------------------------- */
@@ -329,6 +347,12 @@ h2 {
     aspect-ratio: 1;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  @supports not (aspect-ratio: 1) {
+    .nav-btn {
+      height: 1.5rem;
+    }
   }
 
   .nav-btn:hover,
@@ -396,6 +420,13 @@ h2 {
   z-index: 2;
 }
 
+@supports not (padding-inline: 1.5rem) {
+  .explore-btn {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+  }
+}
+
 .explore-btn::after {
   content: "";
   position: absolute;
@@ -409,6 +440,17 @@ h2 {
   z-index: -1;
   cursor: pointer;
   transition: transform 500ms ease-in-out;
+}
+
+@supports not (aspect-ratio: 1) {
+  .explore-btn {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+
+  .explore-btn::after {
+    height: 100%;
+  }
 }
 
 .explore-btn:hover::after,
@@ -426,6 +468,13 @@ h2 {
 .destination-image img {
   width: 10.625rem;
   aspect-ratio: 1;
+}
+
+@supports not (aspect-ratio: 1) {
+  .destination-image,
+  .destination-image img {
+    height: 10.625rem;
+  }
 }
 
 .stats-box {
@@ -450,10 +499,18 @@ h2 {
 
 .tablist {
   justify-content: center;
+  width: 100%;
 }
 
 .text-tab {
   margin-inline: 0.25rem;
+}
+
+@supports not (margin-inline: 0.25rem) {
+  .text-tab {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
 }
 
 /* Crew */
@@ -497,6 +554,12 @@ h2 {
   aspect-ratio: 1;
 }
 
+@supports not (aspect-ratio: 1) {
+  .dot-tab {
+    height: 0.625rem;
+  }
+}
+
 .dot-tab:hover,
 .dot-tab:focus {
   background-color: hsl(var(--clr-white) / 0.5);
@@ -516,8 +579,22 @@ h2 {
   padding-inline: 0;
 }
 
+@supports not (padding-inline: 0) {
+  .grid-container--technology {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .grid-container--technology article {
   padding-inline: 1.5rem;
+}
+
+@supports not (padding-inline: 1.5rem) {
+  .grid-container--technology article {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .technology-image img {
@@ -535,6 +612,12 @@ h2 {
   border: 1px solid hsl(var(--clr-white) / 0.25);
   background-color: transparent;
   color: hsl(var(--clr-white));
+}
+
+@supports not (aspect-ratio: 1) {
+  .number-tab {
+    height: 2.5rem;
+  }
 }
 
 .number-tab:hover,
@@ -582,6 +665,15 @@ h2 {
     grid-template-columns: 1fr 83% 1fr;
 
     padding-top: 8.5rem;
+  }
+
+  @supports not (padding-inline: 2.4375rem) {
+    .grid-container--destination,
+    .grid-container--crew,
+    .grid-container--technology {
+      padding-left: 2.4375rem;
+      padding-right: 2.4375rem;
+    }
   }
 
   .numbered-title {
@@ -659,9 +751,23 @@ h2 {
     padding-inline: 0.5rem;
   }
 
+  @supports not (padding-inline: 0.5rem) {
+    .grid-container--home main,
+    .grid-container--home main p {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
   .explore-btn {
     width: 15.125rem;
     grid-area: button;
+  }
+
+  @supports not (aspect-ratio: 1) {
+    .explore-btn {
+      height: 15.125rem;
+    }
   }
 
   /* Destination */
@@ -701,6 +807,13 @@ h2 {
     padding-inline: 2.5rem;
   }
 
+  @supports not (padding-inline: 2.5rem) {
+    .grid-container--crew article {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
   .crew-image {
     height: 100%;
   }
@@ -713,6 +826,13 @@ h2 {
     justify-self: center;
   }
 
+  @supports not (padding-block: 0.5rem 0) {
+    .crew-image img {
+      padding-top: 0.5rem;
+      padding-bottom: 0;
+    }
+  }
+
   .crew-image#num0 img {
     object-position: 1.5rem 0;
   }
@@ -721,6 +841,13 @@ h2 {
   .grid-container--technology {
     padding-inline: 0;
     background-image: url("images/technology/background-technology-tablet.jpg");
+  }
+
+  @supports not (padding-inline: 0) {
+    .grid-container--technology {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .grid-container--technology h1 {
@@ -734,6 +861,13 @@ h2 {
 
   .grid-container--technology article {
     padding-inline: 4rem;
+  }
+
+  @supports not (padding-inline: 4rem) {
+    .grid-container--technology article {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 
   .technology-description {
@@ -765,12 +899,28 @@ h2 {
     overflow-y: hidden;
   }
 
+  @supports not (padding-block: 0) {
+    .grid-container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .grid-container--destination,
   .grid-container--crew,
   .grid-container--technology {
     grid-template-columns: 5.5rem 1fr 1fr 5.5rem;
     grid-template-rows: auto auto 70%;
     padding-block: clamp(12rem, 25vh, 13.25rem) 6.75rem;
+  }
+
+  @supports not (padding-block: clamp(12rem, 25vh, 13.25rem) 6.75rem) {
+    .grid-container--destination,
+    .grid-container--crew,
+    .grid-container--technology {
+      padding-top: clamp(12rem, 25vh, 13.25rem);
+      padding-bottom: 6.75rem;
+    }
   }
 
   .tablist,
@@ -809,6 +959,13 @@ h2 {
   .navbar {
     padding-inline: 10rem 12rem;
     order: 3;
+  }
+
+  @supports not (padding-inline: 10rem 12rem) {
+    .navbar {
+      padding-left: 10rem;
+      padding-right: 12rem;
+    }
   }
 
   .nav-link span {
@@ -856,6 +1013,14 @@ h2 {
     padding-inline: 1.5rem;
   }
 
+  @supports not (padding-inline: 1.5rem) {
+    .grid-container--destination .tablist,
+    .grid-container--destination article {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
   .destination-description {
     /* padding-right: 1.5rem; */
     height: clamp(8rem, 45vh, 12rem);
@@ -885,6 +1050,13 @@ h2 {
     padding-inline: 0;
   }
 
+  @supports not (padding-inline: 0) {
+    .grid-container--crew article {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   .grid-container--crew .tablist {
     align-self: start;
     --gap: 1.5rem;
@@ -902,16 +1074,9 @@ h2 {
 
   .crew-image img {
     width: 100%;
-
     padding: 0;
-
-    padding-block: 0;
     align-self: start;
   }
-
-  /* .crew-image:where(:not(#num1)) img {
-    margin-top: -3rem;
-  } */
 
   .crew-bio {
     padding-right: 5.5rem;
@@ -934,6 +1099,13 @@ h2 {
     padding-inline: 2.4375rem 0;
   }
 
+  @supports not (padding-inline: 2.4375rem 0) {
+    .grid-container--technology {
+      padding-left: 2.4375rem;
+      padding-right: 0;
+    }
+  }
+
   .grid-container--technology h1 {
     margin-left: 0;
   }
@@ -950,8 +1122,23 @@ h2 {
     padding-inline: 0;
   }
 
+  @supports not (padding-inline: 0) {
+    .grid-container--technology .tablist,
+    .grid-container--technology article {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   .grid-container--technology article {
     padding-inline: 2rem;
+  }
+
+  @supports not (padding-inline: 2rem) {
+    .grid-container--technology article {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .technology-description {
@@ -965,7 +1152,6 @@ h2 {
   .technology-image img {
     width: 32.1875rem;
     height: 32.9375rem;
-
     object-fit: contain;
     margin-top: -3rem;
   }

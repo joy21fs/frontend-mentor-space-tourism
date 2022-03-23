@@ -66,7 +66,6 @@ body,
   /* background-color: hsl(var(--clr-dark)); */
   color: hsl(var(--clr-light));
   overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
 }
 
 li {
@@ -789,6 +788,13 @@ article > p {
   .destination-image,
   .destination-image img {
     width: 18.75rem;
+  }
+
+  @supports not (aspect-ratio: 1) {
+    .destination-image,
+    .destination-image img {
+      height: 18.75rem;
+    }
   }
 
   .destination-description {

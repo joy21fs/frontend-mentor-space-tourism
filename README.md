@@ -13,6 +13,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
 ## Overview
 
@@ -152,6 +153,7 @@ Users should be able to:
     e.g., font-size: clamp(5rem, 8vw + 1rem, 9.375rem) means we are setting the minimum font-size at 5rem, if the calculated value of 8vw is greater than 5rem, font-size would be set to 8vw, until it reaches the maximum value of 9.375rem; best practice is to add 1rem with viewport units to respond to zooming in & out (which viewport units don't respond to; if we are using clamp() for positioning like logos, then we don't necessarily need the +1rem as we don't have to change the positioning at zooming in/out)
   - the ch unit: however wide the “0” character is in a given typeface  
     that’s the measure of one ch. In monospace (fixed-width) fonts, where all characters are the same width, 1ch equals one character. In proportional (variable-width) fonts, any given character could be wider or narrower than the “0” character
+  - the ex unit: the height of the lowercase "x"
 
   - if the font-size I set is bigger than the default heading size, i seemed to have to specifically set its line-height to 1 or else its line-height would still be the default font-size's height
 
@@ -198,6 +200,7 @@ Users should be able to:
 
   **- the background should have an opacity not equal to 1 (somehow transparent)
   - setting the blurring effect by backdrop-filter: blur(value);**
+    (need to use the -webkit- prefix for safari browser support)
 
 - Animations (using CSS Transitions)
   - **transition: <property> <duration> <timing-function> <delay>;**
@@ -217,6 +220,10 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+    
+### Useful resources
+
+- caniuse.com - helps me with learning browser support for modern css properties
     
     
 ### Screenshots

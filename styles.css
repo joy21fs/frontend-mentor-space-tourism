@@ -138,6 +138,12 @@ select {
   gap: var(--gap, 1rem);
 }
 
+@media (max-width: 24em) {
+  .flex {
+    --gap: 0.5rem;
+  }
+}
+
 @supports (not (gap: var(--gap, 1rem))) and (flex-direction: column) {
   .flex > *:where(:not(:first-child)) {
     margin-top: var(--gap, 1rem);
@@ -203,7 +209,7 @@ select {
 }
 
 article,
-.tab-list {
+.tablist {
   width: 100%;
 }
 

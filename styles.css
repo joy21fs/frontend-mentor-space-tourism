@@ -138,12 +138,6 @@ select {
   gap: var(--gap, 1rem);
 }
 
-@media (max-width: 24em) {
-  .flex {
-    --gap: 0.5rem;
-  }
-}
-
 @supports (not (gap: var(--gap, 1rem))) and (flex-direction: column) {
   .flex > *:where(:not(:first-child)) {
     margin-top: var(--gap, 1rem);
@@ -514,6 +508,12 @@ article > p {
 
 .text-tab {
   margin-inline: 0.25rem;
+}
+
+@media (max-width: 24em) {
+  .text-tab {
+    --gap: 0.5rem;
+  }
 }
 
 @supports not (margin-inline: 0.25rem) {
@@ -1083,6 +1083,7 @@ article > p {
 
   .grid-container--crew .tablist {
     align-self: start;
+    justify-content: flex-start;
     --gap: 1.5rem;
   }
 

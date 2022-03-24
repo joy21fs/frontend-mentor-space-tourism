@@ -814,10 +814,6 @@ article > p {
     }
   }
 
-  .destination-description {
-    min-height: 8rem;
-  }
-
   .stats-box {
     flex-direction: row;
     justify-content: space-evenly;
@@ -904,10 +900,6 @@ article > p {
     }
   }
 
-  .technology-description {
-    min-height: 8.75rem;
-  }
-
   .number-tab {
     width: 3.75rem;
   }
@@ -926,6 +918,10 @@ article > p {
 
     /* line-height */
     --lh-400: 2;
+  }
+
+  article {
+    text-align: left;
   }
 
   .grid-container {
@@ -957,15 +953,8 @@ article > p {
     }
   }
 
-  .tablist,
-  article {
-    text-align: left;
-    justify-self: start;
-  }
-
-  .stats-box {
+  .tablist {
     justify-content: flex-start;
-    --gap: 5rem;
   }
 
   .crew-name,
@@ -1055,11 +1044,6 @@ article > p {
     }
   }
 
-  .destination-description {
-    /* padding-right: 1.5rem; */
-    height: clamp(8rem, 45vh, 12rem);
-  }
-
   .destination-image,
   .destination-image img {
     width: clamp(20rem, 45vh, 27.81rem);
@@ -1070,6 +1054,11 @@ article > p {
     .destination-image img {
       height: clamp(20rem, 45vh, 27.81rem);
     }
+  }
+
+  .stats-box {
+    justify-content: flex-start;
+    --gap: 5rem;
   }
 
   /* Crew */
@@ -1100,7 +1089,6 @@ article > p {
 
   .grid-container--crew .tablist {
     align-self: start;
-    justify-content: flex-start;
     --gap: 1.5rem;
   }
 
@@ -1186,6 +1174,7 @@ article > p {
 
   .technology-description {
     padding-right: 1.5rem;
+    height: 25ex;
   }
 
   .technology-image {
@@ -1197,10 +1186,6 @@ article > p {
     height: 32.9375rem;
     object-fit: contain;
     margin-top: -3rem;
-  }
-
-  .grid-container--technology .tablist {
-    justify-content: flex-start;
   }
 
   .number-tab {

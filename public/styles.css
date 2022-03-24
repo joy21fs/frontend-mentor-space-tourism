@@ -132,7 +132,7 @@ select {
 /* Utility classes    */
 /* ------------------- */
 
-/* general */
+/* layouts */
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -162,75 +162,6 @@ select {
 .wrapper {
   /* prevent content from touching the edges */
   padding: 0 1.5rem;
-}
-
-.grid-container {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  width: 100%;
-  min-height: 100vh;
-  padding-block: max(7rem, 10vh) 4.5rem;
-  padding-inline: 1.5rem;
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  gap: 2rem;
-}
-
-@supports (not (padding-inline: 1.5rem)) and
-  (not (padding-block: max(7rem, 10vh) 4.5rem)) {
-  .grid-container {
-    padding: max(7rem, 10vh) 1.5rem 4.5rem 1.5rem;
-  }
-}
-
-.flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
-}
-
-.text-tab:hover,
-.text-tab:focus,
-.nav-link:hover,
-.nav-link:focus {
-  cursor: pointer;
-  border-bottom: 3px solid hsl(var(--clr-white) / 0.5);
-}
-
-.text-tab.active,
-.nav-link.active {
-  border-bottom: 3px solid hsl(var(--clr-white));
-}
-
-article,
-.tablist {
-  width: 100%;
-}
-
-article,
-.destination-image,
-.crew-image,
-.technology-image {
-  display: none;
-}
-
-article.active,
-.destination-image.active,
-.crew-image.active,
-.text-tab.active,
-.technology-image.active {
-  display: inherit;
-}
-
-article > header {
-  flex-direction: column;
-  --gap: 0.5rem;
-}
-
-.nav-link,
-.text-tab {
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid transparent;
 }
 
 /* colors */
@@ -306,15 +237,62 @@ article > header {
   font-size: var(--fs-200);
 }
 
+/* general */
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-block: max(7rem, 10vh) 4.5rem;
+  padding-inline: 1.5rem;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 2rem;
+}
+
+@supports (not (padding-inline: 1.5rem)) and
+  (not (padding-block: max(7rem, 10vh) 4.5rem)) {
+  .grid-container {
+    padding: max(7rem, 10vh) 1.5rem 4.5rem 1.5rem;
+  }
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
   color: hsl(var(--clr-white) / 0.25);
 }
 
-.home-title span,
-h2 {
-  line-height: 1;
+article,
+.tablist {
+  width: 100%;
+}
+
+article,
+.destination-image,
+.crew-image,
+.technology-image {
+  display: none;
+}
+
+article.active,
+.destination-image.active,
+.crew-image.active,
+.text-tab.active,
+.technology-image.active {
+  display: inherit;
+}
+
+article > header {
+  flex-direction: column;
+  --gap: 0.5rem;
 }
 
 article > p {
@@ -323,6 +301,29 @@ article > p {
 
 .tablist {
   justify-content: center;
+}
+
+.tab {
+  padding: 0;
+}
+
+.nav-link,
+.text-tab {
+  padding: 0 0 0.5rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+.text-tab:hover,
+.text-tab:focus,
+.nav-link:hover,
+.nav-link:focus {
+  cursor: pointer;
+  border-bottom: 3px solid hsl(var(--clr-white) / 0.5);
+}
+
+.text-tab.active,
+.nav-link.active {
+  border-bottom: 3px solid hsl(var(--clr-white));
 }
 
 /* --------------------------- */
@@ -437,6 +438,11 @@ article > p {
 
 .home-title span {
   margin-top: 1rem;
+}
+
+.home-title span,
+h2 {
+  line-height: 1;
 }
 
 .explore-btn {
@@ -581,7 +587,6 @@ article > p {
   border-radius: 50%;
   width: 0.625rem;
   aspect-ratio: 1;
-  padding: 0;
 }
 
 @supports not (aspect-ratio: 1) {
@@ -814,10 +819,6 @@ article > p {
     }
   }
 
-  .destination-description {
-    min-height: 8rem;
-  }
-
   .stats-box {
     flex-direction: row;
     justify-content: space-evenly;
@@ -904,10 +905,6 @@ article > p {
     }
   }
 
-  .technology-description {
-    min-height: 8.75rem;
-  }
-
   .number-tab {
     width: 3.75rem;
   }
@@ -926,6 +923,10 @@ article > p {
 
     /* line-height */
     --lh-400: 2;
+  }
+
+  article {
+    text-align: left;
   }
 
   .grid-container {
@@ -957,15 +958,8 @@ article > p {
     }
   }
 
-  .tablist,
-  article {
-    text-align: left;
-    justify-self: start;
-  }
-
-  .stats-box {
+  .tablist {
     justify-content: flex-start;
-    --gap: 5rem;
   }
 
   .crew-name,
@@ -1055,11 +1049,6 @@ article > p {
     }
   }
 
-  .destination-description {
-    /* padding-right: 1.5rem; */
-    height: clamp(8rem, 45vh, 12rem);
-  }
-
   .destination-image,
   .destination-image img {
     width: clamp(20rem, 45vh, 27.81rem);
@@ -1070,6 +1059,11 @@ article > p {
     .destination-image img {
       height: clamp(20rem, 45vh, 27.81rem);
     }
+  }
+
+  .stats-box {
+    justify-content: flex-start;
+    --gap: 5rem;
   }
 
   /* Crew */
@@ -1100,7 +1094,6 @@ article > p {
 
   .grid-container--crew .tablist {
     align-self: start;
-    justify-content: flex-start;
     --gap: 1.5rem;
   }
 
@@ -1186,6 +1179,7 @@ article > p {
 
   .technology-description {
     padding-right: 1.5rem;
+    height: 25ex;
   }
 
   .technology-image {
@@ -1197,10 +1191,6 @@ article > p {
     height: 32.9375rem;
     object-fit: contain;
     margin-top: -3rem;
-  }
-
-  .grid-container--technology .tablist {
-    justify-content: flex-start;
   }
 
   .number-tab {

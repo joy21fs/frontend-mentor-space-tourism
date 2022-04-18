@@ -42,8 +42,7 @@ Users should be able to:
 **HTML**
 
 **- Semantic HTML**
-  - we can have different classes/stylings for the same heading(e.g., the
-    title as <h1> can have <span> with different styles, but as it is the header, we shouldn't write html and separate the same line as <h1> and <h5> just for styling purpose, that is, we want to it to be semantic)
+  - we can have different classes/stylings for the same heading(e.g., the title as <h1> can have <span> with different styles, but as it is the header, we shouldn't write html and separate the same line as <h1> and <h5> just for styling purpose, that is, we want to it to be semantic)
   - we can use the <article> tag for self-contained content, and we can add another <header> inside the <article>;
     - if there's a subheading, always use a <p> rather than having more than one heading tags
 - Using **data attributes** - to store some extra information that doesn't have any visual representation, can be anything just starting with data-
